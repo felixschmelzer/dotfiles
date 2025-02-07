@@ -134,8 +134,10 @@ eval "$(fzf --zsh)"
 alias vi='nvim'
 alias vim='nvim'
 alias c='clear'
+alias ls='ls --color=auto'
 alias ll='ls -la'
-alias l.='ls -d .* --color=auto'
+alias l.='ls -a'
+alias lg='lazygit'
 
 # ──────────────────────────
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
