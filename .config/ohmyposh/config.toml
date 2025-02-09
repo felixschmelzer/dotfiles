@@ -17,24 +17,34 @@ final_space = true
   alignment = 'left'
   newline = true
 
+  # Path segment (shows full path)
   [[blocks.segments]]
     template = '{{ .Path }}'
     foreground = 'blue'
     background = 'transparent'
     type = 'path'
     style = 'plain'
-
     [blocks.segments.properties]
       cache_duration = 'none'
       style = 'full'
 
+  # CONDA segment (shows the active conda environment, if any)
+  [[blocks.segments]]
+    template = '{{ if .Env.CONDA_DEFAULT_ENV }} (conda:{{ .Env.CONDA_DEFAULT_ENV }}){{ end }}'
+    foreground = 'green'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none' 
+  
+  # Git segment (shows branch and status)
   [[blocks.segments]]
     template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
     foreground = 'p:grey'
     background = 'transparent'
     type = 'git'
     style = 'plain'
-
     [blocks.segments.properties]
       branch_icon = ''
       cache_duration = 'none'
@@ -51,7 +61,6 @@ final_space = true
     background = 'transparent'
     type = 'executiontime'
     style = 'plain'
-
     [blocks.segments.properties]
       cache_duration = 'none'
       threshold = 5000
@@ -67,6 +76,5 @@ final_space = true
     type = 'text'
     style = 'plain'
     foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
-
     [blocks.segments.properties]
       cache_duration = 'none'
