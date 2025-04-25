@@ -2,12 +2,12 @@
 
 
 ### Prerequisites (needs to be installed):
-zoxide
-fzf
-oh-my-posh
-neovim
-tmux
-btop
+- zoxide
+- fzf
+- oh-my-posh
+- neovim
+- tmux
+- btop
 
 ### 'Install' using stow
 Run:
