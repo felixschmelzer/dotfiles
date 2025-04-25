@@ -13,8 +13,8 @@ btop
 Run:
 
 ```bash
-
-stow .```
+stow .
+```
 
 to symlink the config files to your home dir. 
 
