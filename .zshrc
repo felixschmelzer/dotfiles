@@ -133,11 +133,15 @@ eval "$(fzf --zsh)"
 # ──────────────────────────
 alias vi='nvim'
 alias vim='nvim'
+
 alias c='clear'
+
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias l.='ls -a'
 alias lg='lazygit'
+
+alias tmxl='tmuxifier load-session'
 
 # ──────────────────────────
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
