@@ -146,6 +146,47 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
+#move apps automatically to workspaces
+# Ghostty → WS 1
+[[on-window-detected]]
+if.app-id                   = 'com.mitchellh.ghostty'
+run                         = ['move-node-to-workspace 1']
+
+# Spotify → WS 6
+[[on-window-detected]]
+if.app-id                   = 'com.spotify.client'
+run                         = ['move-node-to-workspace 6']
+
+# Arc → WS 7
+[[on-window-detected]]
+if.app-id                   = 'company.thebrowser.Browser'
+run                         = ['move-node-to-workspace 7']
+
+# ChatGPT → WS 8
+[[on-window-detected]]
+if.app-id                   = 'com.openai.chat'
+run                         = ['move-node-to-workspace 8']
+
+# WhatsApp → WS 9
+[[on-window-detected]]
+if.app-id                   = 'net.whatsapp.WhatsApp'
+run                         = ['move-node-to-workspace 9']
+
+# Mail → WS 9
+[[on-window-detected]]
+if.app-id                   = 'com.apple.mail'
+run                         = ['move-node-to-workspace 9']
+
+# Calendar → WS 5
+[[on-window-detected]]
+if.app-id                   = 'com.apple.iCal'
+run                         = ['move-node-to-workspace 5']
+
+# Todoist → WS 5
+[[on-window-detected]]
+if.app-id                   = 'com.todoist.mac.Todoist'
+run                         = ['move-node-to-workspace 5']
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
