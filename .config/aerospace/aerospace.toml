@@ -158,9 +158,9 @@ if.app-id                   = 'com.spotify.client'
 run                         = ['move-node-to-workspace 6']
 
 # Arc → WS 7
-[[on-window-detected]]
-if.app-id                   = 'company.thebrowser.Browser'
-run                         = ['move-node-to-workspace 7']
+#[[on-window-detected]]
+#if.app-id                   = 'company.thebrowser.Browser'
+#run                         = ['move-node-to-workspace 7']
 
 # ChatGPT → WS 8
 [[on-window-detected]]
