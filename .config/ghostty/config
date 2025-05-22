@@ -24,3 +24,6 @@ palette = 14=#86e1fc
 palette = 15=#c8d3f5
 
 font-size = 14
+
+macos-option-as-alt = false
+
