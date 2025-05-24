@@ -6,3 +6,6 @@ $pdf_mode = 1;
 @generated_exts = (@generated_exts, 'synctex.gz');
 
 $latex = 'latex -interaction=nonstopmode -shell-escape';
+
+$out_dir = 'output';
+
