@@ -8,5 +8,19 @@
 	email = 65311773+felixschmelzer@users.noreply.github.com
 [core]
 	autocrlf = input
+	pager = delta
 [pull]
 	rebase = false
+
+[merge]
+	conflictstyle = zdiff3
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = side-by-side line-numbers decorations
+	line-numbers = true
+	side-by-side = true
+
+

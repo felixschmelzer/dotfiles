@@ -1,11 +1,14 @@
 
 theme = tokyonight_moon
+
 background = #222436
 foreground = #c8d3f5
+
 selection-background = #2d3f76
 selection-foreground = #c8d3f5
 cursor-color = #c8d3f5
 cursor-text = #222436
+
 palette = 0=#1b1d2b
 palette = 1=#ff757f
 palette = 2=#c3e88d
