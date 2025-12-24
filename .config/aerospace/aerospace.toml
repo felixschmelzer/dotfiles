@@ -101,6 +101,13 @@ automatically-unhide-macos-hidden-apps = false
     alt-ctrl-slash = 'layout tiles horizontal vertical'
     alt-ctrl-comma = 'layout accordion horizontal vertical'
 
+
+    # AeroSpace fullscreen (NOT macOS native fullscreen)
+    # alt-ctrl-f → toggle fullscreen for focused window
+    # alt-ctrl-shift-f → fullscreen with no outer gaps
+    alt-ctrl-f = 'fullscreen'
+    alt-ctrl-shift-f = 'fullscreen --no-outer-gaps'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-ctrl-h = 'focus left'
     alt-ctrl-j = 'focus down'
@@ -155,6 +162,12 @@ run                         = ['move-node-to-workspace 1']
 # Spotify → WS 6
 [[on-window-detected]]
 if.app-id                   = 'com.spotify.client'
+run                         = ['move-node-to-workspace 6']
+
+
+# Tidal -> WS 6
+[[on-window-detected]]
+if.app-id                   = 'com.tidal.desktop'
 run                         = ['move-node-to-workspace 6']
 
 # Arc → WS 7
