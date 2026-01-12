@@ -1,0 +1,42 @@
+set mini-ai
+set relativenumber
+set number
+set commentary
+
+" Use space as <leader>
+let mapleader = " "
+" (If that ever misbehaves, try: let mapleader = "\<Space>")
+
+" <leader>s f  -> search files
+nmap <leader>sf <Action>(GotoFile)
+
+" <leader>s g  -> grep (Find in Files)
+nmap <leader>sg <Action>(FindInPath)
+
+" --- goto group on gr{key} ---
+" a: code action (Alt+Enter)
+nmap gra <Action>(ShowIntentionActions)
+
+" d: definition  (JetBrains calls this “Go to Declaration”)
+nmap grd <Action>(GotoDeclaration)
+
+" D: declaration (same target as above in many languages)
+nmap grD <Action>(GotoDeclaration)
+
+" i: implementation(s)
+nmap gri <Action>(GotoImplementation)
+
+" n: rename
+nmap grn <Action>(RenameElement)
+
+" r: references/usages
+"   pick one of these (full tool window vs. popup):
+nmap grr <Action>(FindUsages)
+" nmap grr <Action>(ShowUsages)
+
+" t: type definition
+nmap grt <Action>(GotoTypeDeclaration)
+
+" Back/Forward in navigation history
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
