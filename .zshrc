@@ -35,6 +35,12 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
+# Docker completions
+# generated with: docker completion zsh > ~/.zsh/completions/_docker
+fpath=(~/.zsh/completions $fpath)
+autoload -Uz compinit
+compinit -d ~/.zcompdump
+
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -156,12 +162,6 @@ alias lg='lazygit'
 alias tmxl='tmuxifier load-session'
 
 # ──────────────────────────
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# SDKMAN
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-
-# ──────────────────────────
 # Additional Paths
 # ──────────────────────────
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
@@ -171,3 +171,6 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 fi
+
+# Enable mise
+eval "$(mise activate zsh)"

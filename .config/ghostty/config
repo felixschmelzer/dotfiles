@@ -1,6 +1,4 @@
-
-theme = tokyonight_moon
-
+window-decoration = none
 background = #222436
 foreground = #c8d3f5
 

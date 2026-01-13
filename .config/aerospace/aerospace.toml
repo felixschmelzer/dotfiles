@@ -159,6 +159,12 @@ automatically-unhide-macos-hidden-apps = false
 if.app-id                   = 'com.mitchellh.ghostty'
 run                         = ['move-node-to-workspace 1']
 
+
+# IntelliJ -> WS 2
+[[on-window-detected]]
+if.app-id                   = 'com.jetbrains.intellij'
+run                         = ['move-node-to-workspace 2']
+
 # Spotify → WS 6
 [[on-window-detected]]
 if.app-id                   = 'com.spotify.client'
@@ -188,6 +194,16 @@ run                         = ['move-node-to-workspace 9']
 # Mail → WS 9
 [[on-window-detected]]
 if.app-id                   = 'com.apple.mail'
+run                         = ['move-node-to-workspace 9']
+
+
+# Teams & Outlook -> 9
+[[on-window-detected]]
+if.app-id                   = 'com.microsoft.teams2'
+run                         = ['move-node-to-workspace 9']
+
+[[on-window-detected]]
+if.app-id                   = 'com.microsoft.Outlook'
 run                         = ['move-node-to-workspace 9']
 
 # Calendar → WS 5
