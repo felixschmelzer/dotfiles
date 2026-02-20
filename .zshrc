@@ -137,6 +137,11 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# Custom scripts
+if [[ -f "$HOME/.config/scripts/gitwt-tmux.zsh" ]]; then
+  source "$HOME/.config/scripts/gitwt-tmux.zsh"
+fi
+
 # Lazygit
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
@@ -171,3 +176,4 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 fi
+eval "$(mise activate zsh)"
