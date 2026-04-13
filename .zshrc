@@ -149,7 +149,7 @@ export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 # Aliases
 # ──────────────────────────
 alias vi='nvim'
-alias vim='nvim'
+alias vim='NVIM_APPNAME=nvim-new nvim'
 
 alias c='clear'
 
