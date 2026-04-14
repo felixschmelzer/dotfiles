@@ -1,0 +1,210 @@
+{
+  "title": "Corne-like lower row hold-taps on built-in keyboard (German physical positions)",
+  "rules": [
+    {
+      "description": "Lower row hold-tap modifiers like Corne on built-in keyboard using German key positions",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "z",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "left_control", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "z" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "left_option", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "x" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "left_shift", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "c" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "left_command", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "v" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "right_command", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "m" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "right_shift", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "comma" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "right_option", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "period" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "right_control", "lazy": true }
+          ],
+          "to_if_alone": [
+            { "key_code": "hyphen" }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                { "is_built_in_keyboard": true }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 350,
+            "basic.to_if_held_down_threshold_milliseconds": 350
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,608 @@
+{
+    "global": { "show_in_menu_bar": false },
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Lower row hold-tap modifiers like Corne on built-in keyboard using German key positions",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "z" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_option",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "x" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "c" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "v" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "m" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "comma" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_option",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "period" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "hyphen",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 350,
+                                    "basic.to_if_held_down_threshold_milliseconds": 350
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "hyphen" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Corne-like symbol combos on built-in keyboard only",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "d" },
+                                        { "key_code": "f" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "e" },
+                                        { "key_code": "r" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "c" },
+                                        { "key_code": "v" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "s" },
+                                        { "key_code": "d" }
+                                    ]
+                                },
+                                "to": [{ "key_code": "grave_accent_and_tilde" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "j" },
+                                        { "key_code": "k" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "9",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "u" },
+                                        { "key_code": "i" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "6",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "m" },
+                                        { "key_code": "comma" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "9",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "k" },
+                                        { "key_code": "l" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "a" },
+                                        { "key_code": "s" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "n",
+                                        "modifiers": ["left_option"]
+                                    },
+                                    { "key_code": "spacebar" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "l" },
+                                        { "key_code": "quote" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": ["left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "e" },
+                                        { "key_code": "i" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "r" },
+                                        { "key_code": "u" }
+                                    ]
+                                },
+                                "to": [{ "key_code": "close_bracket" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "v" },
+                                        { "key_code": "m" }
+                                    ]
+                                },
+                                "to": [{ "key_code": "slash" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "c" },
+                                        { "key_code": "comma" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "f" },
+                                        { "key_code": "j" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "d" },
+                                        { "key_code": "k" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "t" },
+                                        { "key_code": "y" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "6",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": { "optional": ["any"] },
+                                    "simultaneous": [
+                                        { "key_code": "b" },
+                                        { "key_code": "n" }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 24926,
+                        "vendor_id": 7504
+                    },
+                    "manipulate_caps_lock_led": false
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
+}
