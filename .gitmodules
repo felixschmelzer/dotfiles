@@ -1,0 +1,6 @@
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:felixschmelzer/felix.nvim.git
+[submodule ".config/nvim-new"]
+	path = .config/nvim-new
+	url = git@github.com:felixschmelzer/nvim-new.git
