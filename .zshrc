@@ -82,6 +82,9 @@ eval "$(tmuxifier init -)"
 # ──────────────────────────
 
 
+# DotNet
+export PATH="$PATH:/Users/f.schmelzer/.dotnet/tools"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -172,5 +175,11 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 fi
 
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # Enable mise
 eval "$(mise activate zsh)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
